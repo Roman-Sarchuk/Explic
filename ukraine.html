@@ -22,77 +22,80 @@
 
 <body>
     <!-- Ukraine -->
-    <div class="m-general-container" style="background-image: url(photos/ukr.png)">
+    <div data-barba="wrapper">
+        <div class="m-general-container" style="background-image: url(photos/ukr.png)" data-barba="container"
+            data-barba-namespace="ukraine">
 
-        <!-- heder -->
-        <header class="d-flex justify-content-between" style="padding-right: 8%;">
-            <img src="images/logo.png" alt="logo" class="m-logo">
-            <div class="m-author-link">
-                <a href="author.html">автор</a>
-            </div>
-        </header>
+            <!-- heder -->
+            <header class="d-flex justify-content-between" style="padding-right: 8%;">
+                <img src="images/logo.png" alt="logo" class="m-logo">
+                <div class="m-author-link">
+                    <a href="author.html">автор</a>
+                </div>
+            </header>
 
-        <!-- main -->
-        <main>
-            <div class="container-fuide">
-                <div class="row">
+            <!-- main -->
+            <main>
+                <div class="container-fuide">
+                    <div class="row">
 
-                    <!-- article -->
-                    <div class="col col-md-7">
-                        <div class="m-article-container">
-                            <h1>Дослідження</h1>
-                            <p>Ласкаво просимо на сайт, присвячений дослідженню світу!
-                                Тут ви знайдете цікаву інформацію про різноманітні куточки нашої планети. Ми запрошуємо
-                                вас поринути в захопливу подорож крізь безкрайні пустелі, величні гори, а також
-                                дізнатися більше про дві захопливі країни — Україну та Велику Британію.
-                            </p>
-                            <p style="margin-bottom: 0;">Перейдіть до однієї з наших тематичних сторінок, щоб розширити
-                                свої знання про:</p>
-                            <ul>
-                                <li>Пустелі – дізнайтеся про найбільші та найсуворіші місця на Землі.</li>
-                                <li>Гори – відчуйте велич найвищих вершин світу.</li>
-                                <li>Україну – відкрийте для себе багату культуру та історію цієї східноєвропейської
-                                    країни.</li>
-                                <li>Велику Британію – зануртеся у чарівність островів з багатовіковою історією.</li>
-                            </ul>
-                            <p>Розпочніть подорож разом з нами!</p>
+                        <!-- article -->
+                        <div class="col col-md-7">
+                            <div class="m-article-container">
+                                <h1>Дослідження</h1>
+                                <p>Ласкаво просимо на сайт, присвячений дослідженню світу!
+                                    Тут ви знайдете цікаву інформацію про різноманітні куточки нашої планети. Ми
+                                    запрошуємо
+                                    вас поринути в захопливу подорож крізь безкрайні пустелі, величні гори, а також
+                                    дізнатися більше про дві захопливі країни — Україну та Велику Британію.
+                                </p>
+                                <p style="margin-bottom: 0;">Перейдіть до однієї з наших тематичних сторінок, щоб
+                                    розширити
+                                    свої знання про:</p>
+                                <ul>
+                                    <li>Пустелі – дізнайтеся про найбільші та найсуворіші місця на Землі.</li>
+                                    <li>Гори – відчуйте велич найвищих вершин світу.</li>
+                                    <li>Україну – відкрийте для себе багату культуру та історію цієї східноєвропейської
+                                        країни.</li>
+                                    <li>Велику Британію – зануртеся у чарівність островів з багатовіковою історією.</li>
+                                </ul>
+                                <p>Розпочніть подорож разом з нами!</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- cards -->
-                    <div class="col">
-                        <div class="container" id="card-container">
-                            <div class="row row-cols-2 row-cols-sm-1 row-cols-lg-2">
+                        <!-- cards -->
+                        <div class="col">
+                            <div class="container" id="card-container">
+                                <div class="row row-cols-2 row-cols-sm-1 row-cols-lg-2">
 
-                                <div class="col d-flex justify-content-center">
-                                    <div class="m-card m-card-hover-left"
-                                        style="background-image: url(photos/desert.jpg)"
-                                        href="desert.html"></div>
-                                </div>
-                                <div class="col d-flex justify-content-center">
-                                    <div class="m-card m-card-hover-left"
-                                        style="background-image: url(photos/mountains.jpg)"
-                                        href="mountain.html"></div>
-                                </div>
-                                <div class="col d-flex justify-content-center">
-                                    <div class="m-card m-card-hover-right"
-                                        style="background-image: url(photos/home.jpg);"
-                                        href="index.html"></div>
-                                </div>
-                                <div class="col d-flex justify-content-center">
-                                    <div class="m-card m-card-hover-left"
-                                        style="background-image: url(photos/un-kd.jpg)"
-                                        href="uk.html"></div>
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="m-card m-card-hover-left"
+                                            style="background-image: url(photos/desert.jpg)" data-href="desert.html"></div>
+                                    </div>
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="m-card m-card-hover-left"
+                                            style="background-image: url(photos/mountains.jpg)" data-href="mountain.html">
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="m-card m-card-hover-right"
+                                            style="background-image: url(photos/home.jpg);" data-href="index.html"></div>
+                                    </div>
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="m-card m-card-hover-left"
+                                            style="background-image: url(photos/un-kd.jpg)" data-href="uk.html"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-
                 </div>
-            </div>
-        </main>
+            </main>
 
+        </div>
     </div>
+
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
