@@ -1,21 +1,14 @@
 // Ініціалізація barba.js
 barba.init({
     transitions: [{
-        name: 'default-transition',
+        name: 'fade-transition',
         leave(data) {
-            // Анімація зникнення сторінки при переході
-            return gsap.to(data.current.container, {
-                opacity: 0,
-                duration: 0.5
+            // Показуємо затемнення
+            return gsap.to('.m-overlay', {
+                opacity: 1, // Робимо екран чорним
+                duration: 0.4
             });
         },
-        enter(data) {
-            // Анімація появи нової сторінки
-            return gsap.from(data.next.container, {
-                opacity: 0,
-                duration: 0.5
-            });
-        }
     }]
 });
 
@@ -54,7 +47,7 @@ function initAnimations() {
                 scale: 0.9,
                 ease: "back.out(1)",
                 onStart: function () {
-                    item.style.zIndex = '999'; // Виводимо на передній план
+                    item.style.zIndex = '100'; // Виводимо на передній план
                 }
             })
                 .to(item, {
@@ -75,6 +68,7 @@ function initAnimations() {
                     y: -startY, // Рівняємо по верхній частині екрану
                     width: window.innerWidth, // Збільшуємо до ширини екрану
                     height: window.innerHeight, // Збільшуємо до висоти екрану
+                    backgroundPosition: "0% 0%",
                     borderRadius: '0px',
                     boxShadow: "inset 0px 0px 0px 0px rgba(0, 0, 0, 0)",
                     filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))",

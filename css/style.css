@@ -26,12 +26,11 @@ main {
     height: 10vh;
 }
 
-.m-author-link {
+.m-nav-button {
     display: flex;
     justify-content: center;
     align-items: center;
     right: 8%;
-    padding: 10px 25px;
     height: 50%;
 
     background: rgba(6, 6, 6, 0.35);
@@ -39,15 +38,16 @@ main {
     transition: all 0.5s ease;
 }
 
-.m-author-link a {
+.m-nav-button a {
+    margin: 10px 25px;
     display: block;
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.m-author-link:hover {
-    padding-top: 30px;
+.m-nav-button:hover {
+    padding-top: 10px;
     border-radius: 0px 0px 30px 30px;
     background: rgba(6, 6, 6, 0.55);
     filter: drop-shadow(0px 7px 20px rgba(138, 138, 138, 0.25));
@@ -63,6 +63,17 @@ main {
     box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.65);
     border-radius: 0 120px 120px 0;
 }
+@media (max-width: 865px) {
+    .m-article-container {
+        padding-left: 65px;
+    }
+}
+@media (max-width: 745px) {
+    .m-article-container {
+        min-width: 61vw;
+    }
+}
+
 
 /* text */
 h1 {
@@ -70,16 +81,15 @@ h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 66px;
-    line-height: 120px;
+    line-height: 90px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     display: flex;
     align-items: center;
 
     color: #FFFFFF;
-}
-@media (max-width: 865px) {
-    .m-article-container {
-        padding-left: 65px;
-    }
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
 }
 
 p,
@@ -91,6 +101,8 @@ li {
     line-height: 20px;
 
     color: #FFFFFF;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 @media (max-width: 450px) {
@@ -118,6 +130,20 @@ li {
         padding-left: 50px;
     }
 }
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
 
 /* cards */
 .m-card {
@@ -173,4 +199,16 @@ li {
 /* auxiliry */
 .container-fuide {
     padding-right: 10%;
+}
+
+.m-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999; /* Щоб бути поверх всього */
 }
