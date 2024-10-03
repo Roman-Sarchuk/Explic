@@ -17,7 +17,6 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: url(../photos/home.jpg);
     background-size: cover;
 }
 

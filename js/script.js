@@ -1,10 +1,10 @@
 const cardArr = document.querySelectorAll(".m-card");
 
-
-
 // cklicking on card
 cardArr.forEach(card => {
+    
     card.addEventListener('click', function () {
+
         const tween = gsap.timeline({repeat: 0, repeatDelay: 1});
 
         tween.to(card, {
@@ -16,6 +16,14 @@ cardArr.forEach(card => {
             duration: 0.2,
             scale: 1,
             ease: "back.out(1.4)",
-        })
+            onComplete: function() {
+                const url = card.getAttribute('href');
+                if (url) {
+                    window.location.href = url;
+                }
+            },
+        });
+
     });
+
 });
