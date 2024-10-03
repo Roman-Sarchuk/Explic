@@ -40,6 +40,7 @@ main {
 }
 
 .m-author-link a {
+    display: block;
     color: white;
     text-decoration: none;
     font-size: 18px;
