@@ -15,6 +15,7 @@ barba.init({
 // Переініціалізація анімацій після кожного переходу
 barba.hooks.after(() => {
     initAnimations();
+    initWeatherWidget();
 });
 
 // Ініціалізація на старті
@@ -85,4 +86,18 @@ function initAnimations() {
                 });
         });
     });
+}
+
+// Функція ініціалізації віджета погоди
+function initWeatherWidget() {
+    const weatherElement = document.querySelector('.elfsight-app-4cbcf4f8-32ff-4c3d-b5d9-a2e65573094e');
+    if (weatherElement) {
+        // Якщо віджет вже існує, видалити його перед повторною ініціалізацією
+        weatherElement.innerHTML = '';
+    }
+    // Підключення скрипта для віджета
+    const script = document.createElement('script');
+    script.src = 'https://static.elfsight.com/platform/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
 }
