@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Explic - Author</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="img/x-icon">
     <!-- conect boostrap css -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- conect my styles -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/author-style.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,57 +31,100 @@
             data-barba-namespace="uk">
             <div class="m-overlay"></div>
 
+            <!-- conect my author styles -->
+            <link rel="stylesheet" href="css/author-style.css">
+            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+
             <!-- heder -->
             <header class="d-flex justify-content-between" style="padding-right: 8%;">
                 <img src="images/logo.png" alt="logo" class="m-logo">
-                <div class="m-nav-button">
-                    <a href="index.html">головна</a>
-                </div>
+                <nav class="d-flex">
+                    <div class="m-nav-button" data-bs-toggle="modal" data-bs-target="#weather-modal">
+                        <span>погода</span>
+                    </div>
+                    <div class="m-nav-button">
+                        <a href="index.html">головна</a>
+                    </div>
+                </nav>
             </header>
 
             <!-- main -->
             <main>
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-md-6 col-lg-5">
                             <div class="container">
                                 <!-- about me -->
                                 <div class="row">
                                     <div class="col">
-                                        
+                                        <div class="bio-container">
+                                            <img src="images/author-icon.png" alt="author-icon">
+                                            <p>Сарчук Роман Андрійович</p>
+                                            <p>(2 грудня 2006 року)</p>
+                                            <p style="margin-bottom: 0;">"Я можу все. Те, чого ще не вмію,
+                                                я швидко навчусь"</p>
+                                            <p>"Якщо вже щось почав, совість не дасть спокою, доки не доведу справу до
+                                                кінця"</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- socials -->
                                 <div class="row">
                                     <div class="col">
-
+                                        <div class="social-container">
+                                            <a href="">
+                                                <i class="fi-brands-instagram"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fi-brands-facebook"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fi-brands-telegram"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fi-brands-linkedin"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="container"></div>
-                                <!-- video -->
-                                <div class="row">
-                                    <div class="col">
-
-                                    </div>
-                                </div>
-                                <!-- weather -->
-                                <div class="row">
-                                    <div class="col">
-
-                                    </div>
-                                </div>
+                        <div class="col-12 col-md-6 col-lg-7 d-flex align-items-center">
+                            <!-- video -->
+                            <div class='embed-container'>
+                                <iframe src='https://www.youtube.com/embed/Lct8Y8j96SY' frameborder='0'
+                                    allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
-            </main>
-
-            <!-- connect my scripts -->
-            <script src="js/script.js"></script>
         </div>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="weather-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Шо там у Львові?</h1>
+                        <img src="images/weather-icons-64-svgrepo-com.svg" width="50px" height="50px" alt="weather-icon">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- weather -->
+                        <div class="col d-flex justify-content-center">
+                            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                            <div class="elfsight-app-4cbcf4f8-32ff-4c3d-b5d9-a2e65573094e" data-elfsight-app-lazy></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- connect my scripts -->
+        <script src="js/script.js"></script>
+    </div>
     </div>
 
     <!-- conect boostrap js -->

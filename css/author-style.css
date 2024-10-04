@@ -1,0 +1,106 @@
+/* bio */
+.bio-container {
+    margin-top: 12vh;
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.45);
+    border-radius: 60px;
+}
+
+.bio-container p:nth-last-child(1) {
+    padding-inline: 30px;
+}
+
+.bio-container img {
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+    margin-top: -12vh;
+
+    border-radius: 50%;
+    animation: animate 1s ease-in-out 0.1s forwards;
+}
+
+.bio-container > * {
+    opacity: 0;
+}
+
+/* social */
+.social-container {
+    width: 100%;
+    height: auto;
+    padding: 5px 15%;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.45);
+    border-radius: 60px;
+}
+
+.social-container a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+i {
+    color: #eee;
+    font-size: 2.5em;
+    transition: all 0.5s ease;
+}
+
+.social-container i:hover {
+    font-size: 3em;
+}
+
+/* video */
+.embed-container {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+
+    overflow: hidden;
+    border-radius: 60px;
+
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 співвідношення сторін для відео */
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 350px) {
+    i {
+        font-size: 1.5em;
+    }
+    .social-container i:hover {
+        font-size: 2em;
+    }
+    .embed-container {
+        margin-top: 50px;
+        border-radius: 30px;
+    }
+}
