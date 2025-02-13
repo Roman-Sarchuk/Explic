@@ -2,7 +2,7 @@
 
 
 > [!NOTE]
-> This website was created as an art project using HTML, CSS, and JS. Additionally, CSS animations, GSAP, and Barba.js were used. Explic showcases concepts that can be applied to other websites.
+> This website was created as an art project using HTML, CSS, and JS. Additionally, Bootstrap, CSS animations, GSAP, and Barba.js were used. Explic showcases concepts that can be applied to other websites.
 
 # 🖼 Gallery
 ![image](https://github.com/user-attachments/assets/f0379989-fe4e-4d52-8527-4fa35e4afade)
